@@ -19,7 +19,12 @@ public class SongNode {
 
     // TODO: Complete this method to insert a new node after
     // the node passed as an argument
-    public void insertAfter(SongNode node) {}
+   public void insertAfter(SongNode node) {
+      SongNode tmpNext;
+      tmpNext = this.nextNode;
+      this.nextNode = node;
+      node.nextNode = tmpNext;
+   }
 
     // Get location pointed by nextNode
     public SongNode getNext() {
@@ -29,6 +34,6 @@ public class SongNode {
     // TODO: Complete this method to represent a single song
     // as a String
     public String toString() {
-        return ""
+        return "Title: " + songTitle + "\nLength: " + songLength + "\nArtist: " + songArtist + "\n";
     }
 }
