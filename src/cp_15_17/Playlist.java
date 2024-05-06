@@ -45,6 +45,13 @@ public class Playlist {
 
     // TODO: Finish this method
     public String toString() {
-        return "";
+      currNode = headNode;
+      String output = "";
+      currNode = currNode.getNext();
+      while (currNode != null) {
+         output += currNode.toString() + "\n";
+         currNode = currNode.getNext();
+      }
+        return output;
     }
 }
